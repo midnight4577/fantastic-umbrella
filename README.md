@@ -1,7 +1,8 @@
 # midnight4577.github.io
 
 github webiste at:https://midnight4577.github.io/Public/index
-load a frexh gitpod:
+
+load as a gitpod:
 https://gitpod.io/#github.com/midnight4577/midnight4577.github.io
 
 type:
