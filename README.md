@@ -1,6 +1,6 @@
 # midnight4577.github.io
 
-github webiste at:https://midnight4577.github.io/Public/index
+github webiste at:https://midnight4577.github.io/public/index
 
 load as a gitpod:
 
