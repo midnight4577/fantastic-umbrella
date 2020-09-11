@@ -10,7 +10,11 @@ layout: jekyll-theme-hacker
 <input id="myButton123" type="button" value="xOr using Keras Layers" onclick="{
                                                                                      
   (async function myGo() {
-    document.getElementById('myButton123').style.backgroundColor = 'red'  
+    document.getElementById('myButton123').style.backgroundColor = 'red' 
+                                                                              
+                                                                              
+                                                                              
+    //assemble modle                                                                          
     const model = tf.sequential();
 
     model.add(tf.layers.dense({inputShape: [2],  units: 10, activation: 'sigmoid',}) );  // 2 inputs to 10 hidden layer nodes
@@ -19,12 +23,18 @@ layout: jekyll-theme-hacker
                                                                                                
     model.compile({optimizer: myOptimizer, loss: 'meanSquaredError'});    
 
+                                                                              
+                                                                              
+    //insert data                                                                           
     const xTrainingData   = tf.tensor2d([[0,0], [0,1], [1,0], [1,1]]);      // array defines shape  // note should also add , 'int32'
     const yTrainingTarget = tf.tensor2d([0,1,1,0], shape=[4,1]);            // needs shape defined
-                                                                                 
+ 
+     
+                                                                              
+    //train                                                                          
     var myFit = await model.fit(xTrainingData, yTrainingTarget, {
         batchSize : 4,
-        epochs    : 3000,                                                                      
+        epochs    : 10000,                                                                      
         callbacks:  { 
           onEpochEnd: async (epoch, logs) => {                                                                                         
             document.getElementById('myDiv123').innerHTML = 'Epoch # ' + (epoch+1) + '/3000, Loss: ' + logs.loss + '<br><br>'
@@ -34,7 +44,10 @@ layout: jekyll-theme-hacker
       })       // end model.fit                                                                                      
                                                                                 
     const myPredictArray = await model.predict(xTrainingData).data()   // just throw all the training data back in
-                                                                                    
+
+                                                                              
+                                                                              
+    //output                                                                          
     document.getElementById('myDiv123').innerHTML += '[0,0] = ' + myPredictArray[0].toFixed(4) +'<br>'
     document.getElementById('myDiv123').innerHTML += '[1,0] = ' + myPredictArray[1].toFixed(4) +'<br>'
     document.getElementById('myDiv123').innerHTML += '[0,1] = ' + myPredictArray[2].toFixed(4) +'<br>'
