@@ -33,7 +33,7 @@ layout: jekyll-theme-hacker
                                                                               
     //train                                                                          
     var myFit = await model.fit(xTrainingData, yTrainingTarget, {
-        batchSize : 4,
+        batchSize : 6,
         epochs    : 10000,                                                                      
         callbacks:  { 
           onEpochEnd: async (epoch, logs) => {                                                                                         
