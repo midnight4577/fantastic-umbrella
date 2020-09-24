@@ -1,7 +1,4 @@
----
-layout: jekyll-theme-hacker
----
-\<body>
+<body>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.3.0"> </script> 
 
  
