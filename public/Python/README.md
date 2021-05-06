@@ -28,3 +28,7 @@ $ python -m pip install json
 
 io:
 Should already be installed with python
+
+
+
+Also about half the code is from stack overflow so thank you random humans
