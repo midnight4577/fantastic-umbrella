@@ -10,23 +10,21 @@ Date
 
 Pygame:
 ```console
-python3 -m pip install -U pygame --user
+$ python3 -m pip install -U pygame --user
 ```
 
 time:
-```console
-placeholder
-```
+Should already be installed with python
 
 requests:
 ```console
-placeholder
+$ python -m pip install requests
 ```
 
 json:
 ```console
-placeholder
+$ python -m pip install json
 ```
 
 io:
-Should already be installed
+Should already be installed with python
